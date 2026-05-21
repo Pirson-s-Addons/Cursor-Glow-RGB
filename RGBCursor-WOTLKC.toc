@@ -1,0 +1,55 @@
+## Interface: 30400, 30401, 30402, 30403, 30404, 30405
+## Author: Pirson
+## Version: 1.00
+## Title: |TInterface\AddOns\RGBCursor\img\logo-rgbcursor:16:16|t |cffd597ffRGBCursor|r
+
+# https://warcraft.wiki.gg/wiki/Addon_Categories
+## Category: UI Customization
+## Category-deDE: UI-Anpassung
+## Category-esES: Personalización de la interfaz
+## Category-esMX: Personalización de la interfaz
+## Category-frFR: Personnalisation de l'interface
+## Category-itIT: Personalizzazione dell'interfaccia
+## Category-koKR: UI 사용자 설정
+## Category-ptBR: Personalização da interface
+## Category-ruRU: Настройка интерфейса
+## Category-zhCN: UI自定义
+## Category-zhTW: UI自定義
+## Category-plPL: Personalizacja interfejsu
+## Category-svSE: UI-anpassning
+## Category-noNO: UI-tilpasning
+## Category-trTR: Kullanıcı Arayüzü Özelleştirme
+## Category-jaJP: UIのカスタマイズ
+## Category-arSA: تخصيص واجهة المستخدم
+## Category-hiIN: UI अनुकूलन
+## Category-thTH: การปรับแต่ง UI
+## Category-viVN: Tùy chỉnh giao diện
+
+## Notes: |cFF33CCFFCustomizable glowing aura for your cursor.|r
+## Notes-deDE: |cFF33CCFFAnpassbare leuchtende Aura für Ihren Cursor.|r
+## Notes-esES: |cFF33CCFFAura brillante personalizable para tu cursor.|r
+## Notes-esMX: |cFF33CCFFAura brillante personalizable para tu cursor.|r
+## Notes-frFR: |cFF33CCFFAura lumineuse personnalisable para votre curseur.|r
+## Notes-itIT: |cFF33CCFFAura luminosa personalizzabile per il tuo cursore.|r
+## Notes-koKR: |cFF33CCFF마우스 커서를 위한 맞춤형 광채 오라.|r
+## Notes-ptBR: |cFF33CCFFAura brillante personalizável para o seu cursor.|r
+## Notes-ruRU: |cFF33CCFFНастраиваемая светящаяся аура для вашего курсора.|r
+## Notes-zhCN: |cFF33CCFF可自定义的鼠标光标发光光环。|r
+## Notes-zhTW: |cFF33CCFF可自定義的滑鼠光標發光光環。|r
+## Notes-plPL: |cFF33CCFFKonfigurowalna świecąca aura dla twojego kursora.|r
+## Notes-svSE: |cFF33CCFFAnpassningsbar lysande aura för din markör.|r
+## Notes-noNO: |cFF33CCFFTilpassbar lysende aura for markøren din.|r
+## Notes-trTR: |cFF33CCFFİmleciniz için özelleştirilebilir parlama aurası.|r
+## Notes-jaJP: |cFF33CCFFカーソル用のカスタマイズ可能な光의オーラ。|r
+## Notes-arSA: |cFF33CCFFهالة متوهجة قابلة للتخصيص لمؤشر المาوس الخاص بك.|r
+## Notes-hiIN: |cFF33CCFFआपके कर्सर के लिए अनुकूलन योग्य चमकदार आभा।|r
+## Notes-thTH: |cFF33CCFFออร่าเรืองแสงที่ปรับแต่งได้สำหรับเคอร์เซอร์ของคุณ|r
+## Notes-viVN: |cFF33CCFFHào quang phát sáng có thể tùy chỉnh cho con trỏ của bạn.|r
+
+## X-Curse-Project-ID: 1549539
+
+## SavedVariables: RGBCursorDB
+
+Localization.lua
+RGBCursor.lua
+RGBCursor_Options.lua
