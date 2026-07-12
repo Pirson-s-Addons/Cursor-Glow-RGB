@@ -1,6 +1,6 @@
 ## Interface: 38000, 38001
 ## Author: Pirson
-## Version: 1.00
+## Version: 1.01
 ## Title: |TInterface\AddOns\RGBCursor\img\logo-rgbcursor:16:16|t |cffd597ffRGBCursor|r
 
 # https://warcraft.wiki.gg/wiki/Addon_Categories
