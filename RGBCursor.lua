@@ -29,6 +29,7 @@ local defaults = {
     offsetY = -12,
 
     style = "Blue",
+    shape = "Glow",
 
     glowEnabled = true,
     hideOnLeftClick = false,
@@ -37,74 +38,71 @@ local defaults = {
 addon.defaults = defaults
 
 --------------------------------------------------
--- STYLES
+-- SHAPES (aura texture, independent from the color style)
+-- Cada nombre mapea a img/cursor_<nombre en minusculas>.tga; las texturas
+-- se generan con _project/tools/gen_cursor_shapes.py
 --------------------------------------------------
-local glowTex = "Interface\\AddOns\\RGBCursor\\img\\cursor_glow"
+addon.shapes = {}
+for _, name in ipairs({ "Glow", "Circle", "Ring", "Dot", "Crosshair", "Reticle", "Corners", "Diamond" }) do
+    addon.shapes[name] = "Interface\\AddOns\\RGBCursor\\img\\cursor_" .. name:lower()
+end
 
+--------------------------------------------------
+-- STYLES (color / animacion)
+--------------------------------------------------
 addon.styles = {
 
     ["Blue"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 0, g = 0.6, b = 1 }
     },
 
     ["Cyan"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 0, g = 1, b = 1 }
     },
 
     ["Green"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 0, g = 1, b = 0 }
     },
 
     ["Lime"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 0.5, g = 1, b = 0 }
     },
 
     ["Yellow"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 1, g = 1, b = 0 }
     },
 
     ["Orange"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 1, g = 0.5, b = 0 }
     },
 
     ["Red"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 1, g = 0, b = 0 }
     },
 
     ["Pink"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 1, g = 0.4, b = 0.7 }
     },
 
     ["Purple"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 0.6, g = 0, b = 1 }
     },
 
     ["Magenta"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 1, g = 0, b = 1 }
     },
 
     ["White"] = {
-        tex = glowTex,
         mode = "static",
         color = { r = 1, g = 1, b = 1 }
     },
@@ -113,7 +111,6 @@ addon.styles = {
     -- RGB ANIMATION
     --------------------------------------------------
     ["RGB"] = {
-        tex = glowTex,
         mode = "rgb"
     },
 
@@ -121,7 +118,6 @@ addon.styles = {
     -- CUSTOM COLOR
     --------------------------------------------------
     ["Custom"] = {
-        tex = glowTex,
         mode = "custom"
     },
 }
@@ -153,6 +149,10 @@ function addon:Initialize()
 
     if not addon.styles[db.style] then
         db.style = "Blue"
+    end
+
+    if not addon.shapes[db.shape] then
+        db.shape = "Glow"
     end
 
     self.db = db
@@ -218,7 +218,7 @@ function addon:Update()
     local styleData = addon.styles[db.style]
         or addon.styles["Blue"]
 
-    texture:SetTexture(styleData.tex)
+    texture:SetTexture(addon.shapes[db.shape] or addon.shapes["Glow"])
 
     --------------------------------------------------
     -- GLOW DISABLED

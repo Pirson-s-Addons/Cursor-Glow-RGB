@@ -1,6 +1,6 @@
 ## Interface: 20501, 20502, 20503, 20504, 20505, 20506
 ## Author: Pirson
-## Version: 1.01
+## Version: 1.02
 ## Title: |TInterface\AddOns\RGBCursor\img\logo-rgbcursor:16:16|t |cffd597ffRGBCursor|r
 
 # https://warcraft.wiki.gg/wiki/Addon_Categories

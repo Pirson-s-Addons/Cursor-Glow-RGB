@@ -219,7 +219,13 @@ local function CreateOptions()
     local styleHeader = scrollChild:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     styleHeader:SetPoint("TOPLEFT", marginX, currentY)
     styleHeader:SetText("|cffC47FF3" .. (L["STYLE_HEADER"] or "Appearance & Styles") .. "|r")
-    currentY = currentY - 30
+    currentY = currentY - 28
+
+    -- Style label
+    local styleLabel = scrollChild:CreateFontString(nil, "ARTWORK", "GameFontHighlightSmall")
+    styleLabel:SetPoint("TOPLEFT", marginX, currentY)
+    styleLabel:SetText(L["GLOW_STYLE"])
+    currentY = currentY - 18
 
     -- Dropdown
     local dropdown = CreateFrame("Frame", "RGBCursorStyleDropdown", scrollChild, "UIDropDownMenuTemplate")
@@ -259,6 +265,40 @@ local function CreateOptions()
 
     currentY = currentY - 50
 
+    -- Shape label
+    local shapeLabel = scrollChild:CreateFontString(nil, "ARTWORK", "GameFontHighlightSmall")
+    shapeLabel:SetPoint("TOPLEFT", marginX, currentY)
+    shapeLabel:SetText(L["SHAPE"])
+    currentY = currentY - 18
+
+    -- Shape dropdown
+    local shapeDropdown = CreateFrame("Frame", "RGBCursorShapeDropdown", scrollChild, "UIDropDownMenuTemplate")
+    shapeDropdown:SetPoint("TOPLEFT", marginX - 15, currentY)
+    UIDropDownMenu_SetWidth(shapeDropdown, 200)
+    AddTooltip(shapeDropdown, L["TT_SHAPE"])
+
+    UIDropDownMenu_Initialize(shapeDropdown, function()
+        local list = {}
+        for k in pairs(addon.shapes) do table.insert(list, k) end
+        table.sort(list)
+
+        for _, name in ipairs(list) do
+            local info = UIDropDownMenu_CreateInfo()
+            info.text = L[name:upper()] or name
+            info.checked = (addon.db.shape == name)
+            info.func = function()
+                addon.db.shape = name
+                addon:Update()
+                UIDropDownMenu_SetText(shapeDropdown, L[name:upper()] or name)
+                CloseDropDownMenus()
+            end
+            UIDropDownMenu_AddButton(info)
+        end
+    end)
+    UIDropDownMenu_SetText(shapeDropdown, L[addon.db.shape:upper()] or addon.db.shape)
+
+    currentY = currentY - 50
+
     -- Separator
     local line2 = scrollChild:CreateTexture(nil, "ARTWORK")
     line2:SetSize(580, 1)
@@ -293,6 +333,7 @@ local function CreateOptions()
         RGBCursorOffsetXSlider:SetValue(addon.db.offsetX)
         RGBCursorOffsetYSlider:SetValue(addon.db.offsetY)
         UIDropDownMenu_SetText(RGBCursorStyleDropdown, L[addon.db.style:upper()] or addon.db.style)
+        UIDropDownMenu_SetText(RGBCursorShapeDropdown, L[addon.db.shape:upper()] or addon.db.shape)
     end)
     AddTooltip(resetBtn, L["TT_RESET"])
 

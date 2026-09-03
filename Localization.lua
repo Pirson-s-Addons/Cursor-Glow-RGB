@@ -29,6 +29,16 @@ L["MAGENTA"] = "Magenta"
 L["WHITE"] = "White"
 L["RGB"] = "RGB"
 L["CUSTOM"] = "Custom"
+L["SHAPE"] = "Cursor Style"
+L["GLOW"] = "Glow"
+L["CIRCLE"] = "Circle"
+L["RING"] = "Ring"
+L["DOT"] = "Dot"
+L["CROSSHAIR"] = "Crosshair"
+L["RETICLE"] = "Reticle"
+L["CORNERS"] = "Corners"
+L["DIAMOND"] = "Diamond"
+L["TT_SHAPE"] = "Choose the cursor style: glow, ring, dot, crosshair, reticle, corners or diamond."
 
 -- Headers & Tooltips
 L["GEN_HEADER"] = "General Configuration"
@@ -70,6 +80,16 @@ if locale == "esES" or locale == "esMX" then
     L["WHITE"] = "Blanco"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Personalizado"
+    L["SHAPE"] = "Estilo del Cursor"
+    L["GLOW"] = "Resplandor"
+    L["CIRCLE"] = "Círculo"
+    L["RING"] = "Aro"
+    L["DOT"] = "Punto"
+    L["CROSSHAIR"] = "Mira"
+    L["RETICLE"] = "Retícula"
+    L["CORNERS"] = "Esquinas"
+    L["DIAMOND"] = "Rombo"
+    L["TT_SHAPE"] = "Elige el estilo del cursor: resplandor, aro, punto, mira, retícula, esquinas o rombo."
 
     -- Headers & Tooltips
     L["GEN_HEADER"] = "Configuración General"
@@ -111,6 +131,16 @@ elseif locale == "deDE" then
     L["WHITE"] = "Weiß"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Benutzerdefiniert"
+    L["SHAPE"] = "Cursor-Stil"
+    L["GLOW"] = "Leuchten"
+    L["CIRCLE"] = "Kreis"
+    L["RING"] = "Ring"
+    L["DOT"] = "Punkt"
+    L["CROSSHAIR"] = "Fadenkreuz"
+    L["RETICLE"] = "Zielkreis"
+    L["CORNERS"] = "Ecken"
+    L["DIAMOND"] = "Raute"
+    L["TT_SHAPE"] = "Wähle den Cursor-Stil: Leuchten, Ring, Punkt, Fadenkreuz, Zielkreis, Ecken oder Raute."
 
 -- ==========================================
 -- FRANÇAIS (frFR)
@@ -134,6 +164,16 @@ elseif locale == "frFR" then
     L["WHITE"] = "Blanc"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Personnalisé"
+    L["SHAPE"] = "Style du curseur"
+    L["GLOW"] = "Halo"
+    L["CIRCLE"] = "Cercle"
+    L["RING"] = "Anneau"
+    L["DOT"] = "Point"
+    L["CROSSHAIR"] = "Croix de visée"
+    L["RETICLE"] = "Réticule"
+    L["CORNERS"] = "Coins"
+    L["DIAMOND"] = "Losange"
+    L["TT_SHAPE"] = "Choisissez le style du curseur : halo, anneau, point, croix de visée, réticule, coins ou losange."
 
 -- ==========================================
 -- ITALIANO (itIT)
@@ -157,6 +197,16 @@ elseif locale == "itIT" then
     L["WHITE"] = "Bianco"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Personalizzato"
+    L["SHAPE"] = "Stile del cursore"
+    L["GLOW"] = "Bagliore"
+    L["CIRCLE"] = "Cerchio"
+    L["RING"] = "Anello"
+    L["DOT"] = "Punto"
+    L["CROSSHAIR"] = "Mirino"
+    L["RETICLE"] = "Reticolo"
+    L["CORNERS"] = "Angoli"
+    L["DIAMOND"] = "Rombo"
+    L["TT_SHAPE"] = "Scegli lo stile del cursore: bagliore, anello, punto, mirino, reticolo, angoli o rombo."
 
 -- ==========================================
 -- PORTUGUÊS (ptBR)
@@ -180,6 +230,16 @@ elseif locale == "ptBR" then
     L["WHITE"] = "Branco"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Personalizado"
+    L["SHAPE"] = "Estilo do Cursor"
+    L["GLOW"] = "Brilho"
+    L["CIRCLE"] = "Círculo"
+    L["RING"] = "Anel"
+    L["DOT"] = "Ponto"
+    L["CROSSHAIR"] = "Mira"
+    L["RETICLE"] = "Retículo"
+    L["CORNERS"] = "Cantos"
+    L["DIAMOND"] = "Losango"
+    L["TT_SHAPE"] = "Escolha o estilo do cursor: brilho, anel, ponto, mira, retículo, cantos ou losango."
 
 -- ==========================================
 -- RUSSIAN (ruRU)
@@ -203,6 +263,16 @@ elseif locale == "ruRU" then
     L["WHITE"] = "Белый"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Свой цвет"
+    L["SHAPE"] = "Стиль курсора"
+    L["GLOW"] = "Свечение"
+    L["CIRCLE"] = "Круг"
+    L["RING"] = "Кольцо"
+    L["DOT"] = "Точка"
+    L["CROSSHAIR"] = "Прицел"
+    L["RETICLE"] = "Визир"
+    L["CORNERS"] = "Углы"
+    L["DIAMOND"] = "Ромб"
+    L["TT_SHAPE"] = "Выберите стиль курсора: свечение, кольцо, точка, прицел, визир, углы или ромб."
 
 -- ==========================================
 -- KOREAN (koKR)
@@ -226,6 +296,16 @@ elseif locale == "koKR" then
     L["WHITE"] = "흰색"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "사용자 지정"
+    L["SHAPE"] = "커서 스타일"
+    L["GLOW"] = "광채"
+    L["CIRCLE"] = "원"
+    L["RING"] = "고리"
+    L["DOT"] = "점"
+    L["CROSSHAIR"] = "조준선"
+    L["RETICLE"] = "조준경"
+    L["CORNERS"] = "모서리"
+    L["DIAMOND"] = "마름모"
+    L["TT_SHAPE"] = "커서 스타일을 선택하세요: 광채, 고리, 점, 조준선, 조준경, 모서리, 마름모."
 
 -- ==========================================
 -- CHINESE (zhCN)
@@ -249,6 +329,16 @@ elseif locale == "zhCN" then
     L["WHITE"] = "白色"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "自定义"
+    L["SHAPE"] = "光标样式"
+    L["GLOW"] = "光晕"
+    L["CIRCLE"] = "圆形"
+    L["RING"] = "圆环"
+    L["DOT"] = "圆点"
+    L["CROSSHAIR"] = "十字准星"
+    L["RETICLE"] = "准镜"
+    L["CORNERS"] = "四角"
+    L["DIAMOND"] = "菱形"
+    L["TT_SHAPE"] = "选择光标样式：光晕、圆环、圆点、十字准星、准镜、四角或菱形。"
 
 -- ==========================================
 -- CHINESE TRADITIONAL (zhTW)
@@ -272,6 +362,16 @@ elseif locale == "zhTW" then
     L["WHITE"] = "白色"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "自定義"
+    L["SHAPE"] = "游標樣式"
+    L["GLOW"] = "光暈"
+    L["CIRCLE"] = "圓形"
+    L["RING"] = "圓環"
+    L["DOT"] = "圓點"
+    L["CROSSHAIR"] = "十字準星"
+    L["RETICLE"] = "準鏡"
+    L["CORNERS"] = "四角"
+    L["DIAMOND"] = "菱形"
+    L["TT_SHAPE"] = "選擇游標樣式：光暈、圓環、圓點、十字準星、準鏡、四角或菱形。"
 
 -- ==========================================
 -- POLSKI (plPL)
@@ -295,6 +395,16 @@ elseif locale == "plPL" then
     L["WHITE"] = "Biały"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Własny"
+    L["SHAPE"] = "Styl kursora"
+    L["GLOW"] = "Poświata"
+    L["CIRCLE"] = "Okrąg"
+    L["RING"] = "Pierścień"
+    L["DOT"] = "Kropka"
+    L["CROSSHAIR"] = "Krzyżyk"
+    L["RETICLE"] = "Celownik"
+    L["CORNERS"] = "Narożniki"
+    L["DIAMOND"] = "Romb"
+    L["TT_SHAPE"] = "Wybierz styl kursora: poświata, pierścień, kropka, krzyżyk, celownik, narożniki lub romb."
 
 -- ==========================================
 -- SVENSKA (svSE)
@@ -318,6 +428,16 @@ elseif locale == "svSE" then
     L["WHITE"] = "Vit"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Anpassad"
+    L["SHAPE"] = "Markörstil"
+    L["GLOW"] = "Sken"
+    L["CIRCLE"] = "Cirkel"
+    L["RING"] = "Ring"
+    L["DOT"] = "Punkt"
+    L["CROSSHAIR"] = "Hårkors"
+    L["RETICLE"] = "Sikte"
+    L["CORNERS"] = "Hörn"
+    L["DIAMOND"] = "Romb"
+    L["TT_SHAPE"] = "Välj markörstil: sken, ring, punkt, hårkors, sikte, hörn eller romb."
 
 -- ==========================================
 -- NORSK (noNO)
@@ -341,6 +461,16 @@ elseif locale == "noNO" then
     L["WHITE"] = "Hvit"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Tilpasset"
+    L["SHAPE"] = "Pekerstil"
+    L["GLOW"] = "Glød"
+    L["CIRCLE"] = "Sirkel"
+    L["RING"] = "Ring"
+    L["DOT"] = "Prikk"
+    L["CROSSHAIR"] = "Trådkors"
+    L["RETICLE"] = "Sikte"
+    L["CORNERS"] = "Hjørner"
+    L["DIAMOND"] = "Rombe"
+    L["TT_SHAPE"] = "Velg pekerstil: glød, ring, prikk, trådkors, sikte, hjørner eller rombe."
 
 -- ==========================================
 -- TURKISH (trTR)
@@ -364,6 +494,16 @@ elseif locale == "trTR" then
     L["WHITE"] = "Beyaz"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Özel"
+    L["SHAPE"] = "İmleç Stili"
+    L["GLOW"] = "Parıltı"
+    L["CIRCLE"] = "Daire"
+    L["RING"] = "Halka"
+    L["DOT"] = "Nokta"
+    L["CROSSHAIR"] = "Artı Nişangâh"
+    L["RETICLE"] = "Nişangâh"
+    L["CORNERS"] = "Köşeler"
+    L["DIAMOND"] = "Eşkenar Dörtgen"
+    L["TT_SHAPE"] = "İmleç stilini seçin: parıltı, halka, nokta, artı nişangâh, nişangâh, köşeler veya eşkenar dörtgen."
 
 -- ==========================================
 -- JAPANESE (jaJP)
@@ -387,6 +527,16 @@ elseif locale == "jaJP" then
     L["WHITE"] = "白"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "カスタム"
+    L["SHAPE"] = "カーソルのスタイル"
+    L["GLOW"] = "グロー"
+    L["CIRCLE"] = "円"
+    L["RING"] = "リング"
+    L["DOT"] = "ドット"
+    L["CROSSHAIR"] = "クロスヘア"
+    L["RETICLE"] = "レティクル"
+    L["CORNERS"] = "コーナー"
+    L["DIAMOND"] = "ひし形"
+    L["TT_SHAPE"] = "カーソルのスタイルを選択します：グロー、リング、ドット、クロスヘア、レティクル、コーナー、ひし形。"
 
 -- ==========================================
 -- ARABIC (arSA)
@@ -410,6 +560,16 @@ elseif locale == "arSA" then
     L["WHITE"] = "أبيض"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "مخصص"
+    L["SHAPE"] = "نمط المؤشر"
+    L["GLOW"] = "توهج"
+    L["CIRCLE"] = "دائرة"
+    L["RING"] = "حلقة"
+    L["DOT"] = "نقطة"
+    L["CROSSHAIR"] = "تصويب متقاطع"
+    L["RETICLE"] = "منظار تصويب"
+    L["CORNERS"] = "زوايا"
+    L["DIAMOND"] = "معيّن"
+    L["TT_SHAPE"] = "اختر نمط المؤشر: توهج أو حلقة أو نقطة أو تصويب متقاطع أو منظار تصويب أو زوايا أو معيّن."
 
 -- ==========================================
 -- HINDI (hiIN)
@@ -433,6 +593,16 @@ elseif locale == "hiIN" then
     L["WHITE"] = "सफेद"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "कस्टम"
+    L["SHAPE"] = "कर्सर शैली"
+    L["GLOW"] = "चमक"
+    L["CIRCLE"] = "वृत्त"
+    L["RING"] = "छल्ला"
+    L["DOT"] = "बिंदु"
+    L["CROSSHAIR"] = "क्रॉसहेयर"
+    L["RETICLE"] = "रेटिकल"
+    L["CORNERS"] = "कोने"
+    L["DIAMOND"] = "समचतुर्भुज"
+    L["TT_SHAPE"] = "कर्सर की शैली चुनें: चमक, छल्ला, बिंदु, क्रॉसहेयर, रेटिकल, कोने या समचतुर्भुज।"
 
 -- ==========================================
 -- THAI (thTH)
@@ -456,6 +626,16 @@ elseif locale == "thTH" then
     L["WHITE"] = "ขาว"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "กำหนดเอง"
+    L["SHAPE"] = "สไตล์เคอร์เซอร์"
+    L["GLOW"] = "แสงเรือง"
+    L["CIRCLE"] = "วงกลม"
+    L["RING"] = "วงแหวน"
+    L["DOT"] = "จุด"
+    L["CROSSHAIR"] = "เป้าเล็งกากบาท"
+    L["RETICLE"] = "เป้าเล็ง"
+    L["CORNERS"] = "มุม"
+    L["DIAMOND"] = "ข้าวหลามตัด"
+    L["TT_SHAPE"] = "เลือกสไตล์เคอร์เซอร์: แสงเรือง วงแหวน จุด เป้าเล็งกากบาท เป้าเล็ง มุม หรือข้าวหลามตัด"
 
 -- ==========================================
 -- VIETNAMESE (viVN)
@@ -479,6 +659,16 @@ elseif locale == "viVN" then
     L["WHITE"] = "Trắng"
     L["RGB"] = "RGB"
     L["CUSTOM"] = "Tùy chỉnh"
+    L["SHAPE"] = "Kiểu con trỏ"
+    L["GLOW"] = "Hào quang"
+    L["CIRCLE"] = "Hình tròn"
+    L["RING"] = "Vòng tròn"
+    L["DOT"] = "Chấm"
+    L["CROSSHAIR"] = "Tâm ngắm chữ thập"
+    L["RETICLE"] = "Tâm ngắm"
+    L["CORNERS"] = "Góc"
+    L["DIAMOND"] = "Hình thoi"
+    L["TT_SHAPE"] = "Chọn kiểu con trỏ: hào quang, vòng tròn, chấm, tâm ngắm chữ thập, tâm ngắm, góc hoặc hình thoi."
 
 end
 
