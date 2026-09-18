@@ -1,4 +1,5 @@
-local addonName, addon = ...
+local _, addon = ...
+addon = addon or RGBCursor -- clientes < 3.0 no pasan argumentos
 
 local L = setmetatable({}, {
     __index = function(t, k)

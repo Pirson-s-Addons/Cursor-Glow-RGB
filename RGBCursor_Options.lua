@@ -2,7 +2,8 @@
 -- RGBCursor_Options.lua
 --========================================================
 
-local addonName, addon = ...
+local _, addon = ...
+addon = addon or RGBCursor -- clientes < 3.0 no pasan argumentos
 local L = addon.L
 
 -- Helper for tooltips
@@ -38,7 +39,7 @@ local function OpenColorPicker()
 
         -- Update dropdown text if visible
         if RGBCursorStyleDropdown then
-            UIDropDownMenu_SetText(RGBCursorStyleDropdown, L["CUSTOM"])
+            addon.DropDown(UIDropDownMenu_SetText, RGBCursorStyleDropdown, L["CUSTOM"])
         end
     end
 
@@ -60,6 +61,7 @@ local function OpenColorPicker()
         ColorPickerFrame.hasOpacity = true
         ColorPickerFrame.opacity = 1 - c.a
         ColorPickerFrame:SetColorRGB(c.r, c.g, c.b)
+        ColorPickerFrame:Hide() -- si ya estaba visible, Show() no dispararia OnShow
         ColorPickerFrame:Show()
     end
 end
@@ -71,7 +73,8 @@ local function CreateOptions()
     local panelName = "|TInterface\\AddOns\\RGBCursor\\img\\logo-rgbcursor:16:16|t  |cffd597ffRGB Cursor|r"
     local panel = CreateFrame("Frame", "RGBCursorOptions", UIParent)
     panel.name = panelName
-    panel:SetSize(615, 580)
+    addon.SetSize(panel, 615, 580)
+    panel:Hide() -- nace oculto: si no, el Show() al abrir la categoria no dispara OnShow
 
     -- SCROLL CONTAINER
     local scrollFrame = CreateFrame("ScrollFrame", "RGBC_ConfigScrollFrame", panel, "UIPanelScrollFrameTemplate")
@@ -79,8 +82,8 @@ local function CreateOptions()
     scrollFrame:SetPoint("BOTTOMRIGHT", -28, 4)
 
     local scrollChild = CreateFrame("Frame", "RGBC_ConfigScrollChild", scrollFrame)
-    scrollChild:SetSize(580, 1)
-    scrollFrame:SetScrollChild(scrollChild)
+    addon.SetSize(scrollChild, 580, 1)
+    addon.SetScrollChild(scrollFrame, scrollChild)
 
     local currentY = -16
     local marginX = 16
@@ -92,13 +95,13 @@ local function CreateOptions()
 
     -- LOGO
     local logo = scrollChild:CreateTexture(nil, "ARTWORK")
-    logo:SetSize(110, 110)
+    addon.SetSize(logo, 110, 110)
     logo:SetPoint("TOPRIGHT", scrollChild, "TOPRIGHT", -10, -5)
     logo:SetTexture("Interface\\AddOns\\RGBCursor\\img\\logo-rgbcursor")
 
     local version = scrollChild:CreateFontString(nil, "ARTWORK", "GameFontHighlightSmall")
     version:SetPoint("TOP", logo, "BOTTOM", 0, -2)
-    version:SetText("v" .. (C_AddOns.GetAddOnMetadata(addonName, "Version") or "1.00"))
+    version:SetText("v" .. (addon.GetVersion() or "1.00"))
 
     currentY = currentY - 40
 
@@ -210,9 +213,9 @@ local function CreateOptions()
 
     -- Separator
     local line1 = scrollChild:CreateTexture(nil, "ARTWORK")
-    line1:SetSize(580, 1)
+    addon.SetSize(line1, 580, 1)
     line1:SetPoint("TOPLEFT", marginX, currentY)
-    line1:SetColorTexture(1, 1, 1, 0.1)
+    addon.SetSolidColor(line1, 1, 1, 1, 0.1)
     currentY = currentY - 20
 
     -- 2. SECTION: STYLE & COLOR
@@ -230,7 +233,7 @@ local function CreateOptions()
     -- Dropdown
     local dropdown = CreateFrame("Frame", "RGBCursorStyleDropdown", scrollChild, "UIDropDownMenuTemplate")
     dropdown:SetPoint("TOPLEFT", marginX - 15, currentY)
-    UIDropDownMenu_SetWidth(dropdown, 200)
+    addon.DropDown(UIDropDownMenu_SetWidth, dropdown, 200)
     AddTooltip(dropdown, L["TT_STYLE"])
 
     UIDropDownMenu_Initialize(dropdown, function()
@@ -245,18 +248,18 @@ local function CreateOptions()
             info.func = function()
                 addon.db.style = name
                 addon:Update()
-                UIDropDownMenu_SetText(dropdown, L[name:upper()] or name)
+                addon.DropDown(UIDropDownMenu_SetText, dropdown, L[name:upper()] or name)
                 CloseDropDownMenus()
             end
             UIDropDownMenu_AddButton(info)
         end
     end)
-    UIDropDownMenu_SetText(dropdown, L[addon.db.style:upper()] or addon.db.style)
+    addon.DropDown(UIDropDownMenu_SetText, dropdown, L[addon.db.style:upper()] or addon.db.style)
 
     -- Custom Color Button
     local colorBtn = CreateFrame("Button", "RGBC_ColorBtn", scrollChild, "UIPanelButtonTemplate")
     colorBtn:SetPoint("LEFT", dropdown, "RIGHT", 10, 2)
-    colorBtn:SetSize(180, 26)
+    addon.SetSize(colorBtn, 180, 26)
     colorBtn:SetText(L["COLOR_PICKER"])
     colorBtn:SetScript("OnClick", function()
         OpenColorPicker()
@@ -274,7 +277,7 @@ local function CreateOptions()
     -- Shape dropdown
     local shapeDropdown = CreateFrame("Frame", "RGBCursorShapeDropdown", scrollChild, "UIDropDownMenuTemplate")
     shapeDropdown:SetPoint("TOPLEFT", marginX - 15, currentY)
-    UIDropDownMenu_SetWidth(shapeDropdown, 200)
+    addon.DropDown(UIDropDownMenu_SetWidth, shapeDropdown, 200)
     AddTooltip(shapeDropdown, L["TT_SHAPE"])
 
     UIDropDownMenu_Initialize(shapeDropdown, function()
@@ -289,27 +292,27 @@ local function CreateOptions()
             info.func = function()
                 addon.db.shape = name
                 addon:Update()
-                UIDropDownMenu_SetText(shapeDropdown, L[name:upper()] or name)
+                addon.DropDown(UIDropDownMenu_SetText, shapeDropdown, L[name:upper()] or name)
                 CloseDropDownMenus()
             end
             UIDropDownMenu_AddButton(info)
         end
     end)
-    UIDropDownMenu_SetText(shapeDropdown, L[addon.db.shape:upper()] or addon.db.shape)
+    addon.DropDown(UIDropDownMenu_SetText, shapeDropdown, L[addon.db.shape:upper()] or addon.db.shape)
 
     currentY = currentY - 50
 
     -- Separator
     local line2 = scrollChild:CreateTexture(nil, "ARTWORK")
-    line2:SetSize(580, 1)
+    addon.SetSize(line2, 580, 1)
     line2:SetPoint("TOPLEFT", marginX, currentY)
-    line2:SetColorTexture(1, 1, 1, 0.1)
+    addon.SetSolidColor(line2, 1, 1, 1, 0.1)
     currentY = currentY - 20
 
     -- Defaults Button
     local resetBtn = CreateFrame("Button", "RGBC_ResetBtn", scrollChild, "UIPanelButtonTemplate")
     resetBtn:SetPoint("TOPLEFT", marginX, currentY)
-    resetBtn:SetSize(180, 26)
+    addon.SetSize(resetBtn, 180, 26)
     resetBtn:SetText(L["RESET_BUTTON"])
     resetBtn:SetScript("OnClick", function()
         -- Reset DB
@@ -332,30 +335,16 @@ local function CreateOptions()
         RGBCursorSizeSlider:SetValue(addon.db.size)
         RGBCursorOffsetXSlider:SetValue(addon.db.offsetX)
         RGBCursorOffsetYSlider:SetValue(addon.db.offsetY)
-        UIDropDownMenu_SetText(RGBCursorStyleDropdown, L[addon.db.style:upper()] or addon.db.style)
-        UIDropDownMenu_SetText(RGBCursorShapeDropdown, L[addon.db.shape:upper()] or addon.db.shape)
+        addon.DropDown(UIDropDownMenu_SetText, RGBCursorStyleDropdown, L[addon.db.style:upper()] or addon.db.style)
+        addon.DropDown(UIDropDownMenu_SetText, RGBCursorShapeDropdown, L[addon.db.shape:upper()] or addon.db.shape)
     end)
     AddTooltip(resetBtn, L["TT_RESET"])
 
     currentY = currentY - 50
-    scrollChild:SetSize(580, math.abs(currentY))
+    addon.SetSize(scrollChild, 580, math.abs(currentY))
 
-    -- Register
-    local category = Settings.RegisterCanvasLayoutCategory(panel, panel.name)
-    Settings.RegisterAddOnCategory(category)
+    addon.RegisterCategory(panel)
     addon.optionsPanel = panel
-end
-
---------------------------------------------------
--- OPEN OPTIONS
---------------------------------------------------
-function addon:OpenOptions()
-    local panelName = "|TInterface\\AddOns\\RGBCursor\\img\\logo-rgbcursor:16:16|t  |cffd597ffRGBCursor|r"
-    if Settings and Settings.OpenToCategory then
-        Settings.OpenToCategory(panelName)
-    else
-        InterfaceOptionsFrame_OpenToCategory("RGBCursor")
-    end
 end
 
 --------------------------------------------------
@@ -364,9 +353,7 @@ end
 local loader = CreateFrame("Frame")
 loader:RegisterEvent("PLAYER_LOGIN")
 loader:SetScript("OnEvent", function()
-    C_Timer.After(1, function()
-        if addon.db then
-            CreateOptions()
-        end
-    end)
+    if addon.db then
+        CreateOptions()
+    end
 end)

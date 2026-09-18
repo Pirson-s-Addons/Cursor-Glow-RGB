@@ -2,8 +2,8 @@
 -- RGBCursor.lua
 --========================================================
 
-local addonName, addon = ...
-_G.RGBCursor = addon
+local _, addon = ...
+addon = addon or RGBCursor -- clientes < 3.0 no pasan argumentos
 
 --------------------------------------------------
 -- DEFAULT SETTINGS
@@ -126,6 +126,10 @@ local db
 local frame
 local texture
 
+-- Por si algun cliente antiguo no lo trae: sin el, "ocultar al pulsar" no hace
+-- nada en vez de lanzar un error en cada frame.
+local IsMouseButtonDown = IsMouseButtonDown or function() return false end
+
 --------------------------------------------------
 -- INIT
 --------------------------------------------------
@@ -169,7 +173,7 @@ function addon:CreateUI()
 
     frame = CreateFrame("Frame", "RGBCursorGlowFrame", UIParent)
 
-    frame:SetSize(db.size, db.size)
+    addon.SetSize(frame, db.size, db.size)
     frame:SetFrameStrata("TOOLTIP")
     frame:SetFrameLevel(9999)
 
@@ -213,7 +217,7 @@ function addon:Update()
         return
     end
 
-    frame:SetSize(db.size, db.size)
+    addon.SetSize(frame, db.size, db.size)
 
     local styleData = addon.styles[db.style]
         or addon.styles["Blue"]
@@ -288,7 +292,7 @@ local eventFrame = CreateFrame("Frame")
 eventFrame:RegisterEvent("ADDON_LOADED")
 
 eventFrame:SetScript("OnEvent", function(_, _, arg1)
-    if arg1 == addonName then
+    if arg1 == addon.NAME then
         addon:Initialize()
     end
 end)
@@ -300,7 +304,5 @@ SLASH_RGBC1 = "/rgbc"
 SLASH_RGBC2 = "/rgbcursor"
 
 SlashCmdList["RGBC"] = function()
-    if addon.OpenOptions then
-        addon:OpenOptions()
-    end
+    addon.OpenConfig()
 end

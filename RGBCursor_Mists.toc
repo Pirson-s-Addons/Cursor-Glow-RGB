@@ -1,6 +1,6 @@
-## Interface: 50500, 50501, 50502, 50503, 50504
+## Interface: 50400, 50500, 50501, 50502, 50503, 50504, 50505
 ## Author: Pirson
-## Version: 1.02
+## Version: 1.03
 ## Title: |TInterface\AddOns\RGBCursor\img\logo-rgbcursor:16:16|t |cffd597ffRGBCursor|r
 
 # https://warcraft.wiki.gg/wiki/Addon_Categories
@@ -32,7 +32,7 @@
 ## Notes-frFR: |cFF33CCFFAura lumineuse personnalisable para votre curseur.|r
 ## Notes-itIT: |cFF33CCFFAura luminosa personalizzabile per il tuo cursore.|r
 ## Notes-koKR: |cFF33CCFF마우스 커서를 위한 맞춤형 광채 오라.|r
-## Notes-ptBR: |cFF33CCFFAura brillante personalizável para o seu cursor.|r
+## Notes-ptBR: |cFF33CCFFAura brilhante personalizável para o seu cursor.|r
 ## Notes-ruRU: |cFF33CCFFНастраиваемая светящаяся аура для вашего курсора.|r
 ## Notes-zhCN: |cFF33CCFF可自定义的鼠标光标发光光环。|r
 ## Notes-zhTW: |cFF33CCFF可自定義的滑鼠光標發光光環。|r
@@ -40,7 +40,7 @@
 ## Notes-svSE: |cFF33CCFFAnpassningsbar lysande aura för din markör.|r
 ## Notes-noNO: |cFF33CCFFTilpassbar lysende aura for markøren din.|r
 ## Notes-trTR: |cFF33CCFFİmleciniz için özelleştirilebilir parlama aurası.|r
-## Notes-jaJP: |cFF33CCFFカーソル用のカスタマイズ可能な光의オーラ。|r
+## Notes-jaJP: |cFF33CCFFカーソル用のカスタマイズ可能な光のオーラ。|r
 ## Notes-arSA: |cFF33CCFFهالة متوهجة قابلة للتخصيص لمؤشر الماوس الخاص بك.|r
 ## Notes-hiIN: |cFF33CCFFआपके कर्सर के लिए अनुकूलन योग्य चमकदार आभा।|r
 ## Notes-thTH: |cFF33CCFFออร่าเรืองแสงที่ปรับแต่งได้สำหรับเคอร์เซอร์ของคุณ|r
@@ -50,6 +50,7 @@
 
 ## SavedVariables: RGBCursorDB
 
+Compat.lua
 Localization.lua
 RGBCursor.lua
 RGBCursor_Options.lua

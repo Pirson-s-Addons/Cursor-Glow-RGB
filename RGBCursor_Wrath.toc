@@ -1,6 +1,6 @@
-## Interface: 40400, 40401, 40402
+## Interface: 30300, 30400, 30401, 30402, 30403, 30404, 30405, 38000, 38001, 38002
 ## Author: Pirson
-## Version: 1.02
+## Version: 1.03
 ## Title: |TInterface\AddOns\RGBCursor\img\logo-rgbcursor:16:16|t |cffd597ffRGBCursor|r
 
 # https://warcraft.wiki.gg/wiki/Addon_Categories
@@ -40,7 +40,7 @@
 ## Notes-svSE: |cFF33CCFFAnpassningsbar lysande aura för din markör.|r
 ## Notes-noNO: |cFF33CCFFTilpassbar lysende aura for markøren din.|r
 ## Notes-trTR: |cFF33CCFFİmleciniz için özelleştirilebilir parlama aurası.|r
-## Notes-jaJP: |cFF33CCFFカーソル用のカスタマイズ可能な光의オーラ。|r
+## Notes-jaJP: |cFF33CCFFカーソル用のカスタマイズ可能な光のオーラ。|r
 ## Notes-arSA: |cFF33CCFFهالة متوهجة قابلة للتخصيص لمؤشر الماوس الخاص بك.|r
 ## Notes-hiIN: |cFF33CCFFआपके कर्सर के लिए अनुकूलन योग्य चमकदार आभा।|r
 ## Notes-thTH: |cFF33CCFFออร่าเรืองแสงที่ปรับแต่งได้สำหรับเคอร์เซอร์ของคุณ|r
@@ -50,6 +50,7 @@
 
 ## SavedVariables: RGBCursorDB
 
+Compat.lua
 Localization.lua
 RGBCursor.lua
 RGBCursor_Options.lua

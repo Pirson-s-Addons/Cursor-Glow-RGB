@@ -1,8 +1,7 @@
-## Interface: 120001, 120005, 120007, 120100, 120105
+## Interface: 70300
 ## Author: Pirson
 ## Version: 1.03
-## IconTexture: Interface\AddOns\RGBCursor\img\logo-rgbcursor
-## Title: |cffd597ffRGBCursor|r
+## Title: |TInterface\AddOns\RGBCursor\img\logo-rgbcursor:16:16|t |cffd597ffRGBCursor|r
 
 # https://warcraft.wiki.gg/wiki/Addon_Categories
 ## Category: UI Customization
