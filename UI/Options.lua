@@ -1,5 +1,5 @@
 --========================================================
--- RGBCursor_Options.lua
+-- UI/Options.lua
 --========================================================
 
 local _, addon = ...
@@ -70,7 +70,7 @@ end
 -- CREATE OPTIONS UI
 --------------------------------------------------
 local function CreateOptions()
-    local panelName = "|TInterface\\AddOns\\RGBCursor\\img\\logo-rgbcursor:16:16|t  |cffd597ffRGB Cursor|r"
+    local panelName = L["GENERAL"] -- subcategoria de "Acerca de" (UI/About.lua)
     local panel = CreateFrame("Frame", "RGBCursorOptions", UIParent)
     panel.name = panelName
     addon.SetSize(panel, 615, 580)
@@ -343,7 +343,7 @@ local function CreateOptions()
     currentY = currentY - 50
     addon.SetSize(scrollChild, 580, math.abs(currentY))
 
-    addon.RegisterCategory(panel)
+    addon.RegisterSubcategory(addon.CreateAbout(), panel)
     addon.optionsPanel = panel
 end
 

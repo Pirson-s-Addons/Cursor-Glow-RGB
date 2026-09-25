@@ -1,0 +1,65 @@
+local _, addon = ...
+addon = addon or RGBCursor -- clientes < 3.0 no pasan argumentos
+
+-- ==========================================
+-- IDIOMA POR DEFECTO (enUS / enGB)
+-- ==========================================
+-- Este fichero define TODAS las claves. Los demas Locales/<idioma>.lua se
+-- cargan despues y sobrescriben las suyas; lo que falte se queda en ingles.
+
+local L = addon.L or {}
+addon.L = L
+
+L["OPTIONS_TITLE"] = "RGB Cursor Options"
+L["COLOR_PICKER"] = "Color Picker"
+L["ENABLE_GLOW"] = "Enable Effect"
+L["GLOW_STYLE"] = "Effect Style"
+L["SIZE"] = "Size"
+L["BLUE"] = "Blue"
+L["CYAN"] = "Cyan"
+L["GREEN"] = "Green"
+L["LIME"] = "Lime"
+L["YELLOW"] = "Yellow"
+L["ORANGE"] = "Orange"
+L["RED"] = "Red"
+L["PINK"] = "Pink"
+L["PURPLE"] = "Purple"
+L["MAGENTA"] = "Magenta"
+L["WHITE"] = "White"
+L["RGB"] = "RGB"
+L["CUSTOM"] = "Custom"
+L["SHAPE"] = "Cursor Style"
+L["GLOW"] = "Glow"
+L["CIRCLE"] = "Circle"
+L["RING"] = "Ring"
+L["DOT"] = "Dot"
+L["CROSSHAIR"] = "Crosshair"
+L["RETICLE"] = "Reticle"
+L["CORNERS"] = "Corners"
+L["DIAMOND"] = "Diamond"
+L["TT_SHAPE"] = "Choose the cursor style: glow, ring, dot, crosshair, reticle, corners or diamond."
+L["GEN_HEADER"] = "General Configuration"
+L["STYLE_HEADER"] = "Appearance & Styles"
+L["TT_ENABLE"] = "Enable or disable the effect aura around your cursor."
+L["TT_COLOR"] = "Select a custom color for the aura."
+L["TT_STYLE"] = "Choose the texture and animation style of the effect."
+L["TT_SIZE"] = "Adjust the size of the effect aura."
+L["OFFSET_X"] = "X Offset"
+L["OFFSET_Y"] = "Y Offset"
+L["TT_OFFSET_X"] = "Adjust the horizontal position of the aura relative to the cursor."
+L["TT_OFFSET_Y"] = "Adjust the vertical position of the aura relative to the cursor."
+L["RESET_BUTTON"] = "Default Values"
+L["TT_RESET"] = "Reset all settings to their default values."
+L["HIDE_LEFT"] = "Hide on Left Click"
+L["HIDE_RIGHT"] = "Hide on Right Click"
+L["TT_HIDE_LEFT"] = "Hide the effect when the left mouse button is held down."
+L["TT_HIDE_RIGHT"] = "Hide the effect when the right mouse button is held down."
+L["GENERAL"] = "General"
+L["VERSION"] = "Version:"
+L["AUTHOR"] = "Author:"
+L["LINKS"] = "Links"
+L["COMMANDS"] = "Commands"
+L["SELECT"] = "Select"
+L["TT_SELECT"] = "Selects the whole link so you can copy it with Ctrl+C. WoW does not let addons write to the clipboard, so the last step is yours."
+L["ABOUT_DESC"] = "Customizable glowing aura for your cursor: effect, color, size, position and cursor style. The settings are in General."
+L["CMD_OPEN"] = "Opens the settings."

@@ -1,7 +1,8 @@
 ## Interface: 11500, 11501, 11502, 11503, 11504, 11505, 11506, 11507, 11508, 11509
 ## Author: Pirson
-## Version: 1.03
-## Title: |TInterface\AddOns\RGBCursor\img\logo-rgbcursor:16:16|t |cffd597ffRGBCursor|r
+## Version: 1.04
+## IconTexture: Interface\AddOns\RGBCursor\img\logo-rgbcursor
+## Title: |cffd597ffRGBCursor|r
 
 # https://warcraft.wiki.gg/wiki/Addon_Categories
 ## Category: UI Customization
@@ -18,6 +19,30 @@
 ## Category-plPL: Personalizacja interfejsu
 ## Category-svSE: UI-anpassning
 ## Category-noNO: UI-tilpasning
+## Category-csCZ: Přizpůsobení rozhraní
+## Category-nlNL: Interface-aanpassing
+## Category-roRO: Personalizarea interfeței
+## Category-huHU: Felület testreszabása
+## Category-elGR: Προσαρμογή διεπαφής
+## Category-ukUA: Налаштування інтерфейсу
+## Category-daDK: Tilpasning af brugerflade
+## Category-fiFI: Käyttöliittymän mukautus
+## Category-skSK: Prispôsobenie rozhrania
+## Category-bgBG: Персонализиране на интерфейса
+## Category-hrHR: Prilagodba sučelja
+## Category-srRS: Prilagođavanje interfejsa
+## Category-slSI: Prilagoditev vmesnika
+## Category-ltLT: Sąsajos pritaikymas
+## Category-lvLV: Saskarnes pielāgošana
+## Category-etEE: Kasutajaliidese kohandamine
+## Category-idID: Kustomisasi antarmuka
+## Category-msMY: Penyesuaian antara muka
+## Category-faIR: سفارشی‌سازی رابط کاربری
+## Category-heIL: התאמת ממשק
+## Category-bnBD: ইন্টারফেস কাস্টমাইজেশন
+## Category-urPK: انٹرفیس کی تخصیص
+## Category-taIN: இடைமுகத் தனிப்பயனாக்கம்
+## Category-teIN: ఇంటర్‌ఫేస్ అనుకూలీకరణ
 ## Category-trTR: Kullanıcı Arayüzü Özelleştirme
 ## Category-jaJP: UIのカスタマイズ
 ## Category-arSA: تخصيص واجهة المستخدم
@@ -39,6 +64,30 @@
 ## Notes-plPL: |cFF33CCFFKonfigurowalna świecąca aura dla twojego kursora.|r
 ## Notes-svSE: |cFF33CCFFAnpassningsbar lysande aura för din markör.|r
 ## Notes-noNO: |cFF33CCFFTilpassbar lysende aura for markøren din.|r
+## Notes-csCZ: |cFF33CCFFPřizpůsobitelná zářící aura pro tvůj kurzor.|r
+## Notes-nlNL: |cFF33CCFFAanpasbare gloeiende aura voor je cursor.|r
+## Notes-roRO: |cFF33CCFFAură strălucitoare personalizabilă pentru cursorul tău.|r
+## Notes-huHU: |cFF33CCFFTestreszabható ragyogó aura a kurzorodhoz.|r
+## Notes-elGR: |cFF33CCFFΠροσαρμόσιμη φωτεινή αύρα για τον κέρσορά σου.|r
+## Notes-ukUA: |cFF33CCFFНалаштовувана сяйлива аура для твого курсора.|r
+## Notes-daDK: |cFF33CCFFTilpasselig glødende aura til din markør.|r
+## Notes-fiFI: |cFF33CCFFMuokattava hehkuva aura kursorillesi.|r
+## Notes-skSK: |cFF33CCFFPrispôsobiteľná žiariaca aura pre tvoj kurzor.|r
+## Notes-bgBG: |cFF33CCFFПерсонализируема сияйна аура за курсора ти.|r
+## Notes-hrHR: |cFF33CCFFPrilagodljiva svjetleća aura za tvoj pokazivač.|r
+## Notes-srRS: |cFF33CCFFPrilagodljiva svetleća aura za tvoj kursor.|r
+## Notes-slSI: |cFF33CCFFPrilagodljiva žareča avra za tvoj kazalec.|r
+## Notes-ltLT: |cFF33CCFFPritaikoma švytinti aura tavo žymekliui.|r
+## Notes-lvLV: |cFF33CCFFPielāgojama mirdzoša aura tavam kursoram.|r
+## Notes-etEE: |cFF33CCFFKohandatav helendav aura sinu kursorile.|r
+## Notes-idID: |cFF33CCFFAura bercahaya yang dapat disesuaikan untuk kursormu.|r
+## Notes-msMY: |cFF33CCFFAura bercahaya boleh suai untuk kursor anda.|r
+## Notes-faIR: |cFF33CCFFهاله‌ی درخشان قابل تنظیم برای نشانگر ماوس شما.|r
+## Notes-heIL: |cFF33CCFFהילה זוהרת הניתנת להתאמה לסמן שלך.|r
+## Notes-bnBD: |cFF33CCFFআপনার কার্সরের জন্য কাস্টমাইজযোগ্য উজ্জ্বল আভা।|r
+## Notes-urPK: |cFF33CCFFآپ کے کرسر کے لیے قابلِ تخصیص چمکدار ہالہ۔|r
+## Notes-taIN: |cFF33CCFFஉங்கள் கர்சருக்கான தனிப்பயனாக்கக்கூடிய ஒளிரும் ஒளிவட்டம்.|r
+## Notes-teIN: |cFF33CCFFమీ కర్సర్ కోసం అనుకూలీకరించదగిన మెరిసే కాంతి వలయం.|r
 ## Notes-trTR: |cFF33CCFFİmleciniz için özelleştirilebilir parlama aurası.|r
 ## Notes-jaJP: |cFF33CCFFカーソル用のカスタマイズ可能な光のオーラ。|r
 ## Notes-arSA: |cFF33CCFFهالة متوهجة قابلة للتخصيص لمؤشر الماوس الخاص بك.|r
@@ -50,7 +99,27 @@
 
 ## SavedVariables: RGBCursorDB
 
-Compat.lua
-Localization.lua
-RGBCursor.lua
-RGBCursor_Options.lua
+Core/Compat.lua
+Locales/enUS.lua
+Locales/esES.lua
+Locales/deDE.lua
+Locales/frFR.lua
+Locales/itIT.lua
+Locales/ptBR.lua
+Locales/ruRU.lua
+Locales/koKR.lua
+Locales/zhCN.lua
+Locales/zhTW.lua
+Locales/plPL.lua
+Locales/svSE.lua
+Locales/noNO.lua
+Locales/trTR.lua
+Locales/jaJP.lua
+Locales/arSA.lua
+Locales/hiIN.lua
+Locales/thTH.lua
+Locales/viVN.lua
+Locales/csCZ.lua
+Core/RGBCursor.lua
+UI/About.lua
+UI/Options.lua

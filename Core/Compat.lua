@@ -74,9 +74,13 @@ function addon.DropDown(func, frame, value)
 end
 
 -- C_AddOns.GetAddOnMetadata llega en 10.1; el global de siempre ya no existe.
-function addon.GetVersion()
+function addon.GetMetadata(field)
     local get = (C_AddOns and C_AddOns.GetAddOnMetadata) or GetAddOnMetadata
-    return get(addon.NAME, "Version")
+    return get(addon.NAME, field)
+end
+
+function addon.GetVersion()
+    return addon.GetMetadata("Version")
 end
 
 --------------------------------------------------
@@ -86,16 +90,34 @@ end
 -- la categoria por el nombre del panel.
 local hasSettings = (Settings and Settings.RegisterCanvasLayoutCategory) and true or false
 
+-- La raiz es la vista "Acerca de" (UI/About.lua) y los ajustes cuelgan de ella.
+-- Las dos devuelven la categoria; la subcategoria queda como destino de /rgbc.
 function addon.RegisterCategory(panel)
     if hasSettings then
         local category = Settings.RegisterCanvasLayoutCategory(panel, panel.name)
         Settings.RegisterAddOnCategory(category)
         addon.categoryID = category:GetID()
-        return
+        return category
     end
 
     InterfaceOptions_AddCategory(panel)
     addon.categoryID = panel.name
+    return panel
+end
+
+-- Antes de Settings, una subcategoria es un panel que apunta al NOMBRE de su
+-- padre, no a una referencia.
+function addon.RegisterSubcategory(parentCategory, panel)
+    if hasSettings then
+        local category = Settings.RegisterCanvasLayoutSubcategory(parentCategory, panel, panel.name)
+        addon.categoryID = category:GetID()
+        return category
+    end
+
+    panel.parent = parentCategory.name
+    InterfaceOptions_AddCategory(panel)
+    addon.categoryID = panel.name
+    return panel
 end
 
 function addon.OpenConfig()
