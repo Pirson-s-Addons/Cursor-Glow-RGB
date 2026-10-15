@@ -79,6 +79,12 @@ function addon.GetMetadata(field)
     return get(addon.NAME, field)
 end
 
+-- GetMouseFocus desaparece en 11.0: lo sustituye GetMouseFoci (una lista).
+function addon.GetMouseFocus()
+    if GetMouseFoci then return (GetMouseFoci())[1] end
+    return GetMouseFocus and GetMouseFocus()
+end
+
 function addon.GetVersion()
     return addon.GetMetadata("Version")
 end

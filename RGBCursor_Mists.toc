@@ -1,6 +1,6 @@
 ## Interface: 50400, 50500, 50501, 50502, 50503, 50504, 50505
 ## Author: Pirson
-## Version: 1.04
+## Version: 1.05
 ## IconTexture: Interface\AddOns\RGBCursor\img\logo-rgbcursor
 ## Title: |cffd597ffRGBCursor|r
 

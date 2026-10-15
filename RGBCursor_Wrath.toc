@@ -1,6 +1,6 @@
 ## Interface: 30300, 30400, 30401, 30402, 30403, 30404, 30405, 38000, 38001, 38002
 ## Author: Pirson
-## Version: 1.04
+## Version: 1.05
 ## IconTexture: Interface\AddOns\RGBCursor\img\logo-rgbcursor
 ## Title: |cffd597ffRGBCursor|r
 

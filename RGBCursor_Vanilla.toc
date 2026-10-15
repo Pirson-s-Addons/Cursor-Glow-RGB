@@ -1,6 +1,6 @@
 ## Interface: 11500, 11501, 11502, 11503, 11504, 11505, 11506, 11507, 11508, 11509
 ## Author: Pirson
-## Version: 1.04
+## Version: 1.05
 ## IconTexture: Interface\AddOns\RGBCursor\img\logo-rgbcursor
 ## Title: |cffd597ffRGBCursor|r
 

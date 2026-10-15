@@ -1,6 +1,6 @@
 ## Interface: 16001
 ## Author: Pirson
-## Version: 1.04
+## Version: 1.05
 ## IconTexture: Interface\AddOns\RGBCursor\img\logo-rgbcursor
 ## Title: |cffd597ffRGBCursor|r
 

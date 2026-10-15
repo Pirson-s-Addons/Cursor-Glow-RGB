@@ -48,6 +48,37 @@ for _, name in ipairs({ "Glow", "Circle", "Ring", "Dot", "Crosshair", "Reticle",
 end
 
 --------------------------------------------------
+-- RESPLANDOR ADAPTATIVO
+-- La textura Glow lleva la mano pintada: cuando el juego cambia el cursor
+-- (espada, bocadillo, buzon...) se veia la mano debajo. No hay API que diga
+-- que cursor pinta el juego, asi que se deduce de lo que hay bajo el raton:
+-- silueta del cursor real solo cuando es seguro; si no, un halo redondo, que
+-- no choca con ninguno. nil = la mano de siempre.
+--------------------------------------------------
+local CURSOR = "Interface\\Cursor\\"
+local HALO = "Interface\\AddOns\\RGBCursor\\img\\cursor_halo"
+
+function addon.GlowTexture()
+    if GetCursorInfo and GetCursorInfo() then return HALO end -- objeto o hechizo en la mano
+    if SpellIsTargeting and SpellIsTargeting() then return CURSOR .. "Cast" end
+
+    local focus = addon.GetMouseFocus()
+    if focus and focus ~= WorldFrame then return nil end -- sobre la interfaz
+
+    if UnitExists("mouseover") then
+        if UnitCanAttack("player", "mouseover") and not UnitIsDead("mouseover") then
+            return CURSOR .. "Attack"
+        end
+        if UnitIsPlayer("mouseover") then return nil end
+        return HALO -- PNJ (hablar, comprar, posadero...) o cadaver que saquear
+    end
+
+    -- objeto del mundo (buzon, hierba, veta...): solo se nota por su tooltip
+    if GameTooltip:IsShown() and GameTooltip:GetOwner() == UIParent then return HALO end
+    return nil
+end
+
+--------------------------------------------------
 -- STYLES (color / animacion)
 --------------------------------------------------
 addon.styles = {
@@ -222,7 +253,10 @@ function addon:Update()
     local styleData = addon.styles[db.style]
         or addon.styles["Blue"]
 
-    texture:SetTexture(addon.shapes[db.shape] or addon.shapes["Glow"])
+    local adaptive = (db.shape == "Glow" or not addon.shapes[db.shape]) and addon.GlowTexture()
+    texture:SetTexture(adaptive or addon.shapes[db.shape] or addon.shapes["Glow"])
+    -- la silueta del cursor del juego viene en color: en gris, la tine el estilo
+    if texture.SetDesaturated then texture:SetDesaturated(adaptive and true or false) end
 
     --------------------------------------------------
     -- GLOW DISABLED
