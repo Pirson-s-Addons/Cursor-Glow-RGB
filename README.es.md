@@ -47,7 +47,7 @@
    - Classic (Mists): `World of Warcraft/_classic_/Interface/AddOns/`
    - Classic Era: `World of Warcraft/_classic_era_/Interface/AddOns/`
    - TBC Anniversary: `World of Warcraft/_anniversary_/Interface/AddOns/`
-   - WoW Forever: `World of Warcraft/_classic_beta_/Interface/AddOns/`
+   - WoW Forever: `World of Warcraft/_forever_/Interface/AddOns/`
 3. Reinicia el juego y activa el addon.
 
 ## Notas
