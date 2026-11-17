@@ -1,26 +1,13 @@
-<h1 align="center">Cursor Glow RGB</h1>
+<p align="center"><a href="https://www.curseforge.com/wow/addons/cursor-glow-rgb"><img src="https://raw.githubusercontent.com/Pirson-s-Addons/.github/main/profile/assets/readme-cg-es.svg" width="100%" alt="Cursor Glow RGB"/></a></p>
+
+<p align="center"><a href="README.md">English</a> · <b>Español</b></p>
 
 <p align="center">
-  <b>Un aura brillante y personalizable que sigue al cursor del ratón, desde colores fijos hasta un ciclo RGB completo</b>
+<a href="https://www.curseforge.com/wow/addons/cursor-glow-rgb"><b>CurseForge</b></a> ·
+<a href="https://github.com/Pirson-s-Addons/Cursor-Glow-RGB/releases/latest"><b>Descargar</b></a>
 </p>
 
-<p align="center">
-<a href="https://github.com/Pirson-s-Addons/Cursor-Glow-RGB/releases/latest">
-<img src="https://img.shields.io/github/v/release/Pirson-s-Addons/Cursor-Glow-RGB?style=for-the-badge&color=A78BFA">
-</a>
-<img src="https://img.shields.io/badge/WoW-Retail_·_Classic_Era_·_TBC_·_Wrath_·_Cata_·_Mists_·_Forever-C4B5FD?style=for-the-badge">
-<a href="LICENSE">
-<img src="https://img.shields.io/badge/License-MIT-E9D5FF?style=for-the-badge">
-</a>
-</p>
-
-<p align="center">
-<a href="README.md">🇬🇧 English</a>
-</p>
-
----
-
-## 📸 Capturas
+## Capturas
 
 <p align="center">
 <a href="https://www.youtube.com/watch?v=DhS620RpkQA"><img src="https://img.youtube.com/vi/DhS620RpkQA/maxresdefault.jpg" width="640" alt="Cómo se usa Cursor Glow RGB"></a><br>
@@ -33,8 +20,6 @@
 <td align="center" width="50%"><img src="https://media.forgecdn.net/attachments/1692/60/cursor-glow-png.png" alt="El cursor con brillo"><br><sub>El cursor con brillo</sub></td>
 </tr>
 </table>
-
----
 
 ## Qué hace
 
@@ -49,6 +34,11 @@
 - Botón **Valores por defecto** para restablecerlo todo.
 - Traducido a 20 idiomas. Los ajustes se guardan por cuenta (`RGBCursorDB`).
 
+## Uso
+
+- `/rgbc` o `/rgbcursor` abre los ajustes.
+- Los ajustes están en el panel del juego **Opciones → AddOns → RGB Cursor → General**. La propia página **RGB Cursor** muestra la versión, los enlaces y los comandos.
+
 ## Instalación
 
 1. Descarga el zip de la [última release](https://github.com/Pirson-s-Addons/Cursor-Glow-RGB/releases/latest) o de [CurseForge](https://www.curseforge.com/wow/addons/cursor-glow-rgb).
@@ -60,15 +50,12 @@
    - WoW Forever: `World of Warcraft/_classic_beta_/Interface/AddOns/`
 3. Reinicia el juego y activa el addon.
 
-## Uso
-
-- `/rgbc` o `/rgbcursor` abre los ajustes.
-- Los ajustes están en el panel del juego **Opciones → AddOns → RGB Cursor → General**. La propia página **RGB Cursor** muestra la versión, los enlaces y los comandos.
-
 ## Notas
 
 La carpeta debe llamarse `RGBCursor` (sus TOC son `RGBCursor*.toc`). También incluye TOC para clientes antiguos (2.4.3, 3.3.5, 4.3.4, 5.4.8, WoD, Legion, BfA y Shadowlands).
 
----
-
 **Autor**: Pirson · [GitHub](https://github.com/Pirson-s-Addons) · [CurseForge](https://www.curseforge.com/members/pirson/projects) · Licencia MIT
+
+<br/>
+
+<p align="center"><a href="https://github.com/Pirson-s-Addons"><img src="https://raw.githubusercontent.com/Pirson-s-Addons/.github/main/profile/assets/readme-footer-es.svg" width="100%" alt="Parte de Pirson's Addons. Ver todos los addons."/></a></p>
