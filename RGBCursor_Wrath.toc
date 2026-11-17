@@ -1,6 +1,6 @@
 ## Interface: 30300, 30400, 30401, 30402, 30403, 30404, 30405, 38000, 38001, 38002
 ## Author: Pirson
-## Version: 1.06
+## Version: 1.07
 ## IconTexture: Interface\AddOns\RGBCursor\img\logo-rgbcursor
 ## Title: |cffd597ffRGBCursor|r
 
@@ -96,6 +96,11 @@
 ## Notes-viVN: |cFF33CCFFHào quang phát sáng có thể tùy chỉnh cho con trỏ của bạn.|r
 
 ## X-Curse-Project-ID: 1549539
+## X-License: MIT
+## X-Copyright: Copyright (c) 2026 Pirson
+## X-Website: https://github.com/Pirson-s-Addons/Cursor-Glow-RGB
+## X-Localizations: enUS, esES, esMX, deDE, frFR, itIT, ptBR, ruRU, koKR, zhCN, zhTW, plPL, svSE, noNO, trTR, jaJP, arSA, hiIN, thTH, viVN, csCZ
+## AddonCompartmentFunc: RGBCursor_OnAddonCompartmentClick
 
 ## SavedVariables: RGBCursorDB
 

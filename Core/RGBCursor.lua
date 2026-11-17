@@ -161,6 +161,13 @@ local texture
 -- nada en vez de lanzar un error en cada frame.
 local IsMouseButtonDown = IsMouseButtonDown or function() return false end
 
+-- Interfaz de mando activa (Retail y Forever); en clientes sin ella, nunca
+local function GamepadUI()
+    local T = Enum and Enum.InputDeviceInterfaceType
+    local style = C_InputInterfaceStyle and C_InputInterfaceStyle.GetCurrentStyle
+    return T and T.Gamepad and style and style() == T.Gamepad or false
+end
+
 --------------------------------------------------
 -- INIT
 --------------------------------------------------
@@ -218,7 +225,8 @@ function addon:CreateUI()
     frame:Show()
 
     frame:SetScript("OnUpdate", function()
-        local shouldHide = (addon.db.hideOnLeftClick and IsMouseButtonDown("LeftButton")) or (addon.db.hideOnRightClick and IsMouseButtonDown("RightButton"))
+        -- Con la interfaz de mando no hay raton: el brillo se quedaria clavado donde estuvo
+        local shouldHide = GamepadUI() or (addon.db.hideOnLeftClick and IsMouseButtonDown("LeftButton")) or (addon.db.hideOnRightClick and IsMouseButtonDown("RightButton"))
         if shouldHide then
             texture:Hide()
         else
@@ -339,4 +347,10 @@ SLASH_RGBC2 = "/rgbcursor"
 
 SlashCmdList["RGBC"] = function()
     addon.OpenConfig()
+end
+
+-- Menu de addons del minimapa (## AddonCompartmentFunc del .toc): lo mismo que el comando
+function RGBCursor_OnAddonCompartmentClick()
+    local open = SlashCmdList and SlashCmdList.RGBC
+    if open then open("") end
 end
