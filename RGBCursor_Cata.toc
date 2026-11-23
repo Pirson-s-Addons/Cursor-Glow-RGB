@@ -96,6 +96,7 @@
 ## Notes-viVN: |cFF33CCFFHào quang phát sáng có thể tùy chỉnh cho con trỏ của bạn.|r
 
 ## X-Curse-Project-ID: 1549539
+## X-Wago-ID: XKqEPwKy
 ## X-License: MIT
 ## X-Copyright: Copyright (c) 2026 Pirson
 ## X-Website: https://github.com/Pirson-s-Addons/Cursor-Glow-RGB
